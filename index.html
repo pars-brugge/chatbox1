@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل هوشمند SQA</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* استایل‌های مدرن و شیشه‌ای که قبلاً طراحی کردیم */
+        :root { --primary: #eb0a1e; --dark-bg: #0f172a; }
+        body { background: var(--dark-bg); color: white; font-family: tahoma; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .chat-card { width: 400px; height: 600px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.1); }
+        .header { padding: 20px; text-align: center; background: rgba(235, 10, 30, 0.1); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        #chat-window { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+        .msg { padding: 12px; border-radius: 15px; max-width: 80%; line-height: 1.5; font-size: 14px; }
+        .user { align-self: flex-start; background: rgba(255,255,255,0.1); }
+        .bot { align-self: flex-end; background: rgba(235, 10, 30, 0.15); border: 1px solid rgba(235, 10, 30, 0.3); }
+        .input-area { padding: 15px; display: flex; gap: 10px; }
+        input { flex: 1; padding: 12px; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: white; outline: none; }
+        button { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0; background: rgba(0,0,0,0.3); }
+        th, td { border: 1px solid rgba(255,255,255,0.2); padding: 8px; text-align: center; }
+        th { background: var(--primary); }
+    </style>
+</head>
+<body>
+    <div class="chat-card">
+        <div class="header">دستیار هوشمند SQA</div>
+        <div id="chat-window"></div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="سوال خود را بپرسید...">
+            <button onclick="handleSend()">ارسال</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
